@@ -5,31 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Match Details</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; }
-        
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
         /* Navigation menu styling */
         .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             background-color: #333;
-            overflow: hidden;
             padding: 10px 0;
         }
         .navbar a {
-            float: left;
-            display: block;
             color: white;
             text-align: center;
-            padding: 14px 20px;
+            padding: 10px 15px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
         }
         .navbar a:hover {
             background-color: #4CAF50;
         }
 
+        /* Table container for responsiveness */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
         /* Table styling */
-        table { width: 80%; margin: 20px auto; border-collapse: collapse; }
-        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-        th { background-color: #4CAF50; color: white; }
+        table {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            border-collapse: collapse;
+            white-space: nowrap;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -39,13 +64,15 @@
         <a href="./dollar-graph.html">Standings</a>
         <a href="./win-graph.html"># of Wins</a>
         <a href="#">Match Details</a>
-           </div>
+    </div>
 
     <h1>Match Details</h1>
-    <table id="sheetTable">
-        <thead></thead>
-        <tbody></tbody>
-    </table>
+    <div class="table-container">
+        <table id="sheetTable">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
     <script>
         const sheetId = "1YJWZMRbg7VpQWGW8bsIlAWq6abnqggsDwWC2Z9e4n54";
