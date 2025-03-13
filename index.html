@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Sheets Data</title>
+    <title>Match Details</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
+        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; }
+        
+        /* Navigation menu styling */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 10px 0;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #4CAF50;
+        }
+
+        /* Table styling */
         table { width: 80%; margin: 20px auto; border-collapse: collapse; }
         th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
         th { background-color: #4CAF50; color: white; }
@@ -13,7 +34,14 @@
 </head>
 <body>
 
-    <h1>Google Sheets Data</h1>
+    <!-- Navigation Menu -->
+    <div class="navbar">
+        <a href="./dollar-graph.html">Standings</a>
+        <a href="./win-graph.html"># of Wins</a>
+        <a href="#">Match Details</a>
+           </div>
+
+    <h1>Match Details</h1>
     <table id="sheetTable">
         <thead></thead>
         <tbody></tbody>
